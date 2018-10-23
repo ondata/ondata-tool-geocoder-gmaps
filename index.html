@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Trova le coordinate geografiche! | Coord Finder | by Ondata</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- COORDFINDER Inizio -->
+    
+        <!-- jQuery -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <!-- Google Maps API javascript -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAM-5rwm1iCmJtJVal-rOKolO6qswft86U&sensor=false"></script>
+        <script type="text/javascript" src="vectorMarkerAnimate.js"></script>
+        <script type="text/javascript" src="coordfinder.js"></script>
+		  
+	<!-- stile mappa prov
+        <style type="text/css">
+            #map_canvas { height: 612px; width: 1024px; }
+            div.marker { padding: 0; margin: 0; }
+        </style>
+	-->
+    
+    <!-- COORDFINDER Fine-->
+    
+  </head>
+
+  <body onload="initialize()">
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">Trova le coordinate geografiche! | Coord Finder</a>
+        </div>
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right" style="margin-top:75px">
+        <div class="col-xs-12 col-sm-9" style="float:right;">
+          <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h4>Trova le coordinate</h4>
+              <p>Inserisci il nome di una località o un indirizzo e trova le coordinate.</p>
+              <!--<p><a class="btn btn-default" href="#">View details &raquo;</a></p>-->
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h4>Crea un marker</h4>
+              <p>Clicca sulla mappa per aggiungere un marker e trovare le coordinate</p>
+              <!--<p><a class="btn btn-default" href="#">View details &raquo;</a></p>-->
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h4>Sposta il marker</h4>
+              <p>Trascina il marker per posizionarlo con precisione ed ottenere le coordinate. </p>
+              <!--<p><a class="btn btn-default" href="#">View details &raquo;</a></p>-->
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="jumbotron">
+	    <div id="map_canvas"></div>
+	  </div>
+
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="well sidebar-nav">
+            <ul class="nav">
+              <li><h4>Cosa puoi fare?</h4></li>
+
+              <!-- COORDFINDER html - Inizio -->
+              <li><p>Cerca un luogo sulla mappa: <input size="25" id="place"><!--<input type="button" value="Cerca" id="search">--> Ultimi: <select id="places"></select></p></li>
+	      <li><p>Se serve, modifica il valore del raggio del cerchio: <input id="radius" size="1" value="10"> <select id="is"><option value="km">km</option><option value="nm">nm</option></select> </p></li>
+              <li><p>Le attuali coordinate della posizione del marker: <br><input size="40" id="coord_latlng" disabled> (lat [TAB] lon)</p></li>
+              <!-- COORDFINDER html - Fine -->
+              
+              </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+
+<!--       <hr> -->
+
+      <footer>
+          Il riuso delle coordinate e della mappa è regolato dalla <a href="https://developers.google.com/maps/documentation/javascript/geocoding" target="_blank">licenza d'uso di Google</a></p>
+      </footer>
+
+    </div><!--/.container-->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!--<script src="offcanvas.js"></script>-->
+  </body>
+</html>

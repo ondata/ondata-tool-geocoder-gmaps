@@ -1,0 +1,38 @@
+body { 
+  height: 100%; 
+  margin: 0px; 
+  padding: 10px; 
+  
+}
+
+#map_canvas {
+  height: 512px; 
+  width: 100%;
+}
+
+div.marker { 
+  padding: 0; 
+  margin: 0; 
+}
+
+#coord_latlng, #place { 
+  width:100% !important ;
+  height:50px;
+      }
+      
+li p {
+  margin-top:2em;
+      }
+      
+.jumbotron {
+  padding:0px !important;
+}
+
+.col-xs-6 {
+  max-width: 100%;
+  
+}
+
+ul.nav.navbar-nav { 
+  float:right;
+}
